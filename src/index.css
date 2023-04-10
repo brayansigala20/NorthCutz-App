@@ -1,13 +1,59 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+#root{
+    font-family: 'Share Tech Mono', monospace;
+}
+.botonSesion{
+    background: linear-gradient(to right, blue, pink);
+}
+.navBar{
+    background: linear-gradient(70deg, #0c0c0c00, #2d2d30);
+    
+}
+.menuBar{
+    display: flex;
+    flex-direction: column;
+    width: 2rem;
+    height: 2rem;
+    border: 0;
+    background: transparent;
+    gap: .55rem
+}
+.menuBar > div {
+    background:white;
+    height: 1px;
+    width: 90%;
+    border-radius: 5px;
+    transition: all .5s;
+    transform-origin: left;
+}
+.botonMenu{
+    display: flex;
+    flex-direction: column;
+    width: 2rem;
+    height: 2rem;
+    border: 0;
+    background: transparent;
+    gap: .55rem
+}
+.botonMenu > div {
+    background:white;
+    height: 1px;
+    width: 90%;
+    border-radius: 5px;
+    transition: all .5s;
+    transform-origin: left;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.botonMenu:hover div:first-child{
+    transform: rotate(45deg);
 }
+.botonMenu:hover div:nth-child(2){
+    opacity: 0;
+}
+.botonMenu:hover div:last-child{
+    transform: rotate(-45deg);
+}
+
+
